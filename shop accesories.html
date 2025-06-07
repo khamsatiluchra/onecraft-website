@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shop Accessories - OneCraft</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #1a1a1a;
+    }
+
+    .background-blur {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('background 1.jpeg'); /* ganti sesuai file kamu */
+      background-size: cover;
+      background-position: center;
+      filter: blur(10px);
+      z-index: -2;
+    }
+
+    .background-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.8);
+      z-index: -1;
+    }
+
+    marquee {
+      color: black;
+      background-color: #A9A9A9;
+      padding: 10px;
+      font-size: 20px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .back-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      padding: 8px 16px;
+      background-color: #5c3d2e;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .center-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80vh;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+
+    .social-button {
+      width: 220px;
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      color: white;
+      font-weight: bold;
+      margin: 10px 0;
+      transition: background-color 0.3s ease;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .tiktok {
+      background-color: #000000;
+    }
+
+    .whatsapp {
+      background-color: #25D366;
+    }
+
+    .instagram {
+      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    }
+
+    .social-button:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="background-blur"></div>
+  <div class="background-overlay"></div>
+
+  <marquee behavior="scroll" direction="right" scrollamount="10">
+    Selamat Datang di Halaman Shop Accessories OneCraft!
+  </marquee>
+
+  <a href="Onecraft1.html" class="back-button">BACK</a>
+
+  <div class="center-content">
+    <h1>Shop Accessories</h1>
+
+    <a href="https://www.tiktok.com/@oneecrafttt?_t=ZS-8wwhCZXtajQ&_r=1" target="_blank">
+      <button class="social-button tiktok">TikTok</button>
+    </a>
+
+    <a href="https://wa.me/6281396971781" target="_blank">
+      <button class="social-button whatsapp">WhatsApp</button>
+    </a>
+
+    <a href="https://www.instagram.com/oneecraftt?igsh=dnl6aG00eXEyc3kz" target="_blank">
+      <button class="social-button instagram">Instagram</button>
+    </a>
+  </div>
+
+</body>
+</html>

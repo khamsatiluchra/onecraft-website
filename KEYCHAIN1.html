@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Blossom Series</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #1a1a1a;
+    }
+
+    .background-blur {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('background 1.jpeg');
+      background-size: cover;
+      background-position: center;
+      filter: blur(12px);
+      z-index: -2;
+    }
+
+    .background-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.85);
+      z-index: -1;
+    }
+
+    marquee {
+      background-color: #A9A9A9;
+      color: black;
+      padding: 10px;
+      font-size: 20px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .back-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      text-decoration: none;
+      background-color: #5c3d2e;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 100px auto 40px;
+      padding: 20px;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .slider {
+      position: relative;
+      width: 320px;
+      height: 320px;
+      margin: 0 auto 10px;
+      overflow: hidden;
+      border-radius: 20px;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slides img {
+      width: 320px;
+      height: 320px;
+      object-fit: cover;
+      flex-shrink: 0;
+      border-radius: 20px;
+    }
+
+    .nav-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      font-size: 22px;
+      padding: 8px 12px;
+      cursor: pointer;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .nav-button.left {
+      left: 10px;
+    }
+
+    .nav-button.right {
+      right: 10px;
+    }
+
+    .slide-indicator {
+      margin: 5px auto 15px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .product-title {
+      font-size: 28px;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 10px;
+    }
+
+    .product-price {
+      color: #5c3d2e;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+      margin: 0 auto 24px;
+      border-collapse: collapse;
+      font-size: 16px;
+    }
+
+    th, td {
+      padding: 12px 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f5f5f5;
+      font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+      background-color: #fafafa;
+    }
+
+    .order-button {
+      background-color: #5c3d2e;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .order-button:hover {
+      background-color: #3d291f;
+    }
+  </style>
+</head>
+<body>
+
+  <marquee behavior="scroll" direction="right" scrollamount="10">
+    Selamat Datang di Halaman Produk Kami! Temukan Produk yang Tepat untuk Anda dan Nikmati Pengalaman Berbelanja yang Menyenangkan!
+  </marquee>
+
+  <div class="background-blur"></div>
+  <div class="background-overlay"></div>
+
+  <a href="Onecraft1.html" class="back-button">BACK</a>
+
+  <div class="container">
+
+    <div class="slider">
+      <button class="nav-button left" onclick="changeSlide(-1)" id="prevBtn">&#10094;</button>
+      <div class="slides" id="slides">
+        <img src="002_resized.jpeg" alt="Gambar 1">
+      </div>
+      <button class="nav-button right" onclick="changeSlide(1)" id="nextBtn">&#10095;</button>
+    </div>
+    <div class="slide-indicator" id="indicator">1 / 1</div>
+
+    <div class="product-title">Blossom Series</div>
+    <div class="product-price">IDR 4.000</div>
+
+    <table>
+      <tr>
+        <th>Deskripsi</th>
+        <td>gantungan bunga warna-warni dari chenille lembut berwarna pastel, dihiasi pita dan mutiara cantik sebagai pemanis.✨</td>
+      </tr>
+      <tr>
+        <th>Bahan</th>
+        <td>kawat chenille</td>
+      </tr>
+      <tr>
+        <th>Warna</th>
+        <td>pink, biru, ungu, hijau, dll</td>
+      </tr>
+      <tr>
+        <th>Ukuran</th>
+        <td>All Size (Adjustable)</td>
+      </tr>
+      <tr>
+        <th>Stok</th>
+        <td>Tersedia/PO</td>
+      </tr>
+    </table>
+
+    <button class="order-button" onclick="window.location.href='https://wa.me/6281396971781?text=Halo kak,%20saya%20mau%20pesan%20keychain%20Blossom%20Series.'">
+      Order Now
+    </button>
+  </div>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.getElementById('slides');
+    const images = slides.getElementsByTagName('img');
+    const totalSlides = images.length;
+    const indicator = document.getElementById('indicator');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    function updateSlider() {
+      slides.style.transform = `translateX(-${currentSlide * 320}px)`;
+      indicator.textContent = `${currentSlide + 1} / ${totalSlides}`;
+
+      // Update tombol aktif/nonaktif
+      prevBtn.disabled = currentSlide === 0;
+      nextBtn.disabled = currentSlide === totalSlides - 1;
+      prevBtn.style.opacity = prevBtn.disabled ? 0.4 : 1;
+      nextBtn.style.opacity = nextBtn.disabled ? 0.4 : 1;
+    }
+
+    function changeSlide(direction) {
+      if (
+        (direction === -1 && currentSlide > 0) ||
+        (direction === 1 && currentSlide < totalSlides - 1)
+      ) {
+        currentSlide += direction;
+        updateSlider();
+      }
+    }
+
+    updateSlider(); // Inisialisasi awal
+  </script>
+
+</body>
+</html>
